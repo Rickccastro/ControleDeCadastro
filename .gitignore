@@ -1,0 +1,78 @@
+# Pastas de build
+bin/
+obj/
+debug/
+release/
+*.exe
+*.dll
+*.pdb
+
+# Configuracoes especificas do Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.*
+*.cache
+*.ipch
+*.tlog
+
+# Logs e cache
+*.log
+*.vsix
+.vscode/
+.idea/
+*.idb
+*.dir
+*.ncb
+
+# Configuracoes de publicacao
+publish/
+App_Data/
+*.Publish.xml
+
+# Configuracoes temporarias
+*.tmp
+*.bak
+*.swp
+*.class
+.DS_Store
+Thumbs.db
+
+# Arquivos de lock
+project.lock.json
+project.fragment.lock.json
+
+# Arquivos de pacotes NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Arquivos gerados por pacotes
+*.generated.cs
+Generated_Code/
+
+# Arquivos de Teste
+TestResults/
+*.coverage
+*.coveragexml
+
+# Arquivos de backup
+_backup/
+
+# Outros arquivos desnecessarios
+*.g.*
+*.iobj
+*.ilk
+*.obj
+*.res
+*.resources
+
+# Arquivos do Rider (JetBrains)
+.idea/
+*.iml
+out/
+
+# Arquivos de backup do Visual Studio
+*.bak
+*.old
+
