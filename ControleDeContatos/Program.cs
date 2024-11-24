@@ -1,3 +1,7 @@
+using ControleDeContatos.Data;
+using ControleDeContatos.Repository;
+using Microsoft.EntityFrameworkCore;
+
 namespace ControleDeContatos;
 
 public class Program
@@ -11,6 +15,11 @@ public class Program
         builder.Services.AddRazorPages()
         .AddRazorRuntimeCompilation();
 
+        builder.Services.AddControllersWithViews();
+        builder.Services.AddDbContext<BancoContext>(options =>
+  options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
+        builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+       
         var app = builder.Build();
 
 
