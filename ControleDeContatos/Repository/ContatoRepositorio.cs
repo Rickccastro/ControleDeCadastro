@@ -1,5 +1,6 @@
 ﻿using ControleDeContatos.Data;
 using ControleDeContatos.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ControleDeContatos.Repository;
 
@@ -40,5 +41,18 @@ public class ContatoRepositorio : IContatoRepositorio
     public ContatoModel BuscarPorId(int id)
     {
         return _bancoContext.Contatos.FirstOrDefault(item => item.Id == id)!;
+    }
+
+    public bool Excluir(int id)
+    {
+        var contatoDb = this.BuscarPorId(id);
+        if (contatoDb == null)
+        {
+            throw new Exception("Ocorre um erro ao deletar o contato");
+        }
+        _bancoContext.Contatos.Remove(contatoDb);
+        _bancoContext.SaveChanges();
+
+        return true;
     }
 }
