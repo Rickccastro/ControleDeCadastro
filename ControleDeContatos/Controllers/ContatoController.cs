@@ -25,11 +25,17 @@ public class ContatoController : Controller
         ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
         return View(contato);
     }
-    public IActionResult Excluir()
+    public IActionResult Excluir(int id)
     {
-        return View();
-
+        ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
+        return View(contato);
     }
+    public IActionResult ExcluirConfirmado(int id)
+    {
+        _contatoRepositorio.Excluir(id);
+        return RedirectToAction("Index");
+    }
+
 
     [HttpPost]
     public IActionResult Criar(ContatoModel contato)
