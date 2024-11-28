@@ -47,6 +47,7 @@ public class ContatoController : Controller
             }
             return RedirectToAction("Index");
         }
+
         catch (Exception ex) 
         {
             TempData["MensagemErro"] = $"Erro ao excluir o contato! {ex.Message}";
