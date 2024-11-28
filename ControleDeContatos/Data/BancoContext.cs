@@ -9,5 +9,7 @@ public class BancoContext : DbContext
     {
 
     }
+
     public DbSet<ContatoModel> Contatos { get; set; }
+    public DbSet<UsuarioModel> Usuario { get; set; }
 }
