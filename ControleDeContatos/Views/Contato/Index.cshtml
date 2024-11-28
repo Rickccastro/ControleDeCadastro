@@ -19,18 +19,19 @@
     {
         <div class="alert alert-danger" role="alert">
             @TempData["MensagemErro"]
-           <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="12">X</button>
+            <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="12">X</button>
         </div>
     }
 
     <h1> Listagem de Contatos </h1>
-    <table class="table">
+    <table class="table" id="table-contatos">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Celular</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
